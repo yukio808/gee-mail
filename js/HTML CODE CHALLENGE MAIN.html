@@ -1,0 +1,76 @@
+<html> 
+ 	<head> 
+    <script src="js/mail-generator.js"></script> 
+    <link href="css/style.css" rel="stylesheet" media="screen"> 
+     <script> 
+       window.onload = function(){ 
+         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE.  
+         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser 
+         var mainElement = document.getElementById('main');
+
+         for (var i = 0; i < window.geemails.length; i++){
+         	// This is the function used to start loop, when i < window.geemails.length it will create loop to generate the random data and stop when it "i" reaches after 10.
+         	var message = window.geemails[i];
+        	var sender = message.sender;
+        	var subject = message.subject;
+        	var body = message.body;
+        	var date1 = message.date;
+
+
+        	var senderHTMLElement = document.createElement("div");
+        	senderHTMLElement.innerHTML = sender;
+        	senderHTMLElement.className = 'sender';
+
+            mainElement.appendChild(senderHTMLElement);
+
+            var subjectHTMLElement = document.createElement("div");
+            subjectHTMLElement.innerHTML = subject;
+            subjectHTMLElement.className = 'subject';
+
+            mainElement.appendChild(subjectHTMLElement);
+
+            var  dateHTMLElement = document.createElement("div");
+            dateHTMLElement.innerHTML = date1;
+            dateHTMLElement.className = 'date1';
+
+            mainElement.appendChild(dateHTMLElement);
+
+            var bodyHTMLElement = document.createElement("div");
+            bodyHTMLElement.innerHTML = body;
+            bodyHTMLElement.className = 'body';
+
+            mainElement.appendChild(bodyHTMLElement)
+
+
+        }
+
+        var inboxCountElement = document.getElementById('inboxCount');
+        inboxCountElement.innerHTML = window.geemails.length;
+        count++;
+
+      };
+
+      window.onload = setInterval(function(){
+       // to add new messages {
+ 		var newMessage = getNewMessage(); // Getting a new message by setting the variable for getElement
+ 		window.geemails.push(newMessage); 
+
+ 		document.getElementById('main').innerHTML = message;
+ 		count++; // add 1 each time it loops 
+ 		document.getElementById("message").innerHTML =
+ 		15000); //new message every 15 seconds.
+ 	  };
+      
+     </script> 
+ 	</head> 
+ 	<body> 
+ 		<div class="container" id="main"> 
+ 		  <div>
+ 		  inbox
+ 		  <span id='inboxCount'></span>
+ 		  </div>
+          aaaarrrrrrrggggggggghhhhhhhhh
+          <div class="container" id="" ="message"> </div> 
+ 		</div> 
+ 	</body> 
+ </html> 
