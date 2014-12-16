@@ -47,9 +47,41 @@
         inboxCountElement.innerHTML = window.geemails.length;
         count++;
 
-        setInterval(function () {loadGeeMails()}, 3000);
-        var message = generateMessage();
-        window.geemails.push(message);
+        var timer = setInterval(addNewMessage, 15000);
+
+        function addNewMessage(){
+            var newMessage = getNewMessage(); // Getting a new message by setting the variable for getElement
+            
+            document.getElementById('main').innerHTML = message; 
+
+            var senderHTMLElement = document.createElement("div");
+            senderHTMLElement.innerHTML = sender;
+            senderHTMLElement.className = 'sender';
+
+            mainElement.appendChild(senderHTMLElement);
+
+            var subjectHTMLElement = document.createElement("div");
+            subjectHTMLElement.innerHTML = subject;
+            subjectHTMLElement.className = 'subject';
+
+            mainElement.appendChild(subjectHTMLElement);
+
+            var  dateHTMLElement = document.createElement("div");
+            dateHTMLElement.innerHTML = date1;
+            dateHTMLElement.className = 'date1';
+
+            mainElement.appendChild(dateHTMLElement);
+
+            var bodyHTMLElement = document.createElement("div");
+            bodyHTMLElement.innerHTML = body;
+            bodyHTMLElement.className = 'body';
+
+            mainElement.appendChild(bodyHTMLElement)
+            
+            //following line won't work, need to append elements like you did in for loop above
+            
+            count++; // add 1 each time it loops 
+        };
      };
 
      </script> 
