@@ -52,8 +52,7 @@
         function addNewMessage(){
             var newMessage = getNewMessage(); // Getting a new message by setting the variable for getElement
             
-            document.getElementById('main').innerHTML = message; 
-
+            document.getElementById('div').innerHTML = message; 
             var senderHTMLElement = document.createElement("div");
             senderHTMLElement.innerHTML = sender;
             senderHTMLElement.className = 'sender';
@@ -77,6 +76,7 @@
             bodyHTMLElement.className = 'body';
 
             mainElement.appendChild(bodyHTMLElement)
+
             
             //following line won't work, need to append elements like you did in for loop above
             
