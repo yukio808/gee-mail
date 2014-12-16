@@ -46,6 +46,10 @@
         var inboxCountElement = document.getElementById('inboxCount');
         inboxCountElement.innerHTML = window.geemails.length;
         count++;
+
+        setInterval(function () {loadGeeMails()}, 3000);
+        var message = generateMessage();
+        window.geemails.push(message);
      };
 
      </script> 
@@ -56,7 +60,7 @@
  		  inbox
  		  <span id='inboxCount'></span>
  		  </div>
-          aaaarrrrrrrggggggggghhhhhhhhh
+          GEEMAIL
           <div class="container" id="" ="message"> </div> 
  		</div> 
  	</body> 
