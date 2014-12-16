@@ -79,6 +79,8 @@
             //following line won't work, need to append elements like you did in for loop above
             
             count++; // add 1 each time it loops 
+            inboxCountElement.innerHTML = window.geemails.length ++;
+            
         };
      };
 
@@ -86,12 +88,13 @@
  	</head> 
  	<body> 
  		<div class="container" id="main"> 
- 		  <div>
- 		  inbox
- 		  <span id='inboxCount'></span>
- 		  </div>
+        <div class="app" id="application">
           GEEMAIL
-          <div class="container" id="" ="message"> </div> 
+          </div>
+          <div class="container" id="message"> </div> 
+ 		  <div class="inbox">
+ 		  Inbox
+ 		  <span id='inboxCount'></span>
  		</div> 
  	</body> 
  </html> 
