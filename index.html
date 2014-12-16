@@ -46,13 +46,6 @@
         var inboxCountElement = document.getElementById('inboxCount');
         inboxCountElement.innerHTML = window.geemails.length;
         count++;
-      
-        var timer = setInterval(addNewMessage, 15000);
-
- 	function addNewMessage(){
-        var newMessage = getNewMessage(); // Getting a new message by setting the variable for getElement
- 		window.geemails.push(newMessage); 
-       };
      };
 
      </script> 
